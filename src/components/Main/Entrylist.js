@@ -1,0 +1,1 @@
+//(title, date, a text, a favorite icon button)
