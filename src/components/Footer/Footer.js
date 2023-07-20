@@ -1,5 +1,7 @@
+import "./Footer.css";
+
 export function Footer() {
   const currentDate = new Date();
 
-  return <span>{currentDate.toDateString()}</span>;
+  return <span className="footer">{currentDate.toDateString()}</span>;
 }

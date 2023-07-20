@@ -1,15 +1,16 @@
 import "./App.css";
 import { Header } from "./components/Header/Header";
 import { Main } from "./components/Main/Main";
-import { Input } from "./components/Main/Input";
 import { Footer } from "./components/Footer/Footer";
+import { Form } from "./components/Main/Form";
+//import { Children } from "react";
 
 function App() {
   return (
     <>
       <Header>Journal</Header>
       <Main>
-        <Input></Input>
+        <Form></Form>
       </Main>
       <Footer></Footer>
     </>
