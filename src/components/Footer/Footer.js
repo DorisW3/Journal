@@ -1,5 +1,5 @@
 export function Footer() {
   const currentDate = new Date();
 
-  return <span>Journal App - {currentDate.toDateString()}</span>;
+  return <span>{currentDate.toDateString()}</span>;
 }
