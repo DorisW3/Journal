@@ -13,18 +13,10 @@ export function Form() {
         <input className="notes" type="text" id="notes"></input>
       </div>
       <div className="button__container">
-        <Button>Create</Button>
+        <button className="button" type="button">
+          Create
+        </button>
       </div>
     </form>
-  );
-}
-
-function Button({ children }) {
-  return (
-    <div>
-      <button className="button" type="button">
-        {children}
-      </button>
-    </div>
   );
 }
