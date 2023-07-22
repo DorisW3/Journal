@@ -1,0 +1,8 @@
+.favorite-button__container {
+  align-self: end;
+}
+
+.favorite-button {
+  border: none;
+  background-color: var(--color-foam);
+}

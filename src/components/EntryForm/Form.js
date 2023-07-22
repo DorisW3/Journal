@@ -10,7 +10,7 @@ export function Form() {
       </div>
       <div className="notes__container">
         <label htmlFor="notes">Notes</label>
-        <input className="notes" type="text" id="notes"></input>
+        <textarea className="notes" type="text" id="notes"></textarea>
       </div>
       <div className="button__container">
         <button className="button" type="button">
