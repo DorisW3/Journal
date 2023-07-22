@@ -30,4 +30,14 @@ const entries = [
   },
 ];
 
-//export function Section () {}
+export function Section() {
+  return (
+    <>
+      <ul>
+        {entries.map(({ id, name }) => (
+          <li key={id}>{name}</li>
+        ))}
+      </ul>
+    </>
+  );
+}
