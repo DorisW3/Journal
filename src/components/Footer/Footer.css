@@ -1,7 +1,8 @@
-.footer {
+Footer {
   background-color: var(--color-granite);
   color: var(--color-foam);
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  text-align: center;
+  margin-top: 60px;
+  padding: 25px 0;
+  font-size: 16px;
 }
