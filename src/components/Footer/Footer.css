@@ -3,4 +3,5 @@
   color: var(--color-foam);
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
