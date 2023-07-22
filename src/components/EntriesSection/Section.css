@@ -1,0 +1,11 @@
+.entry {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.entry__date {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
