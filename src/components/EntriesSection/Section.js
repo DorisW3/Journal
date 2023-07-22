@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import "./Section.css";
 import { Divider } from "../Divider/Divider.js";
+import { FavoriteButton } from "../FavoriteButton/FavoriteButton.js";
 
 // tabbar with two tabs(badge with number of entries) & an entrylist (title, date, a text, a favorite icon button)
 
@@ -39,11 +40,12 @@ export function EntriesSection() {
     <>
       {entries.map(({ id, date, motto, notes }) => (
         <>
-          <article className="entry">
+          <article data-js="article" className="entry">
             <div className="entry__date">
               <p key={id}>{date}</p>
             </div>
-            <h2 key={id}>“{motto}“</h2>
+            <FavoriteButton />
+            <h2 key={id}>“{motto} “</h2>
             <p key={id}>{notes}</p>
           </article>
           <Divider />
