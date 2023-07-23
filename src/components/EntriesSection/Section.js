@@ -1,12 +1,12 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import "./Section.css";
 import { Divider } from "../Divider/Divider.js";
 import { FavoriteButton } from "../FavoriteButton/FavoriteButton.js";
 
 // tabbar with two tabs(badge with number of entries) & an entrylist (title, date, a text, a favorite icon button)
 
-export function EntriesSection() {
-  const entries = [
+export function EntriesSection({ entries }) {
+  const initialEntries = [
     {
       id: 1000,
       date: "Feb 5, 2025",
@@ -36,13 +36,30 @@ export function EntriesSection() {
     },
   ];
 
+  const CurrentDate = new Date().toLocaleDateString("de", {
+    year: "numeric",
+    day: "numeric",
+    month: "short",
+  });
+
+  const [entry, setEntry] = useState([initialEntries]);
+
+  function handleAddEntry(newEntry) {
+    setEntry(initialEntries, entry);
+  }
+
   return (
     <>
-      {entries.map(({ id, date, motto, notes }) => (
+      {initialEntries.map(({ id, CurrentDate, motto, notes }) => (
         <>
-          <article data-js="article" className="entry">
+          <article
+            data-js="article"
+            className="entry"
+          >
             <div className="entry__date">
-              <p key={id}>{date}</p>
+              <p key={id} className="date">
+                {CurrentDate}
+              </p>
             </div>
             <FavoriteButton />
             <h2 key={id}>“{motto} “</h2>
