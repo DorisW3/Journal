@@ -1,4 +1,3 @@
-import React, { Fragment, useState } from "react";
 import "./Section.css";
 import { Divider } from "../Divider/Divider.js";
 import { FavoriteButton } from "../FavoriteButton/FavoriteButton.js";
@@ -36,30 +35,13 @@ export function EntriesSection({ entries }) {
     },
   ];
 
-  const CurrentDate = new Date().toLocaleDateString("de", {
-    year: "numeric",
-    day: "numeric",
-    month: "short",
-  });
-
-  const [entry, setEntry] = useState([initialEntries]);
-
-  function handleAddEntry(newEntry) {
-    setEntry(initialEntries, entry);
-  }
-
   return (
     <>
-      {initialEntries.map(({ id, CurrentDate, motto, notes }) => (
+      {initialEntries.map(({ id, date, motto, notes }) => (
         <>
-          <article
-            data-js="article"
-            className="entry"
-          >
+          <article data-js="article" className="entry">
             <div className="entry__date">
-              <p key={id} className="date">
-                {CurrentDate}
-              </p>
+              <p className="date">{date}</p>
             </div>
             <FavoriteButton />
             <h2 key={id}>“{motto} “</h2>
