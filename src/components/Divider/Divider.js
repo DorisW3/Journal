@@ -1,5 +1,5 @@
 import "./Divider.css";
-import "../EntriesSection/Section.js";
+import "../EntriesSection/EntriesSection";
 
 export function Divider() {
   return (
